@@ -1,0 +1,127 @@
+body {
+  background-image: url(../img/istockphoto-175602798-612x612.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-areas:
+  "hd"
+  "mn"
+  "mn"
+  "mn"
+  "ft";
+  grid-template-rows: min-content repeat(3, 1fr) min-content;
+  margin: 0;
+  min-height: 100vh;
+}
+
+footer {
+  background-color: #008080;
+  color: #daa520;
+  grid-area: ft;
+  height: min-content;
+  margin-top: 2em;
+}
+
+footer > p {
+  margin: 1em;
+}
+
+form {
+  align-items: flex-start;
+  background-color: #f0ffff;
+  border: 0.25em groove #20b2aa;
+  border-radius: 1em;
+  color: #daa520;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  min-height: 75vh;
+  justify-content: space-around;
+  width: min-content;
+}
+
+h1 {
+  color: #daa520;
+  grid-area: hd;
+  margin-left: 1em;
+}
+
+h2 {
+  color: #daa520;
+  margin: 0 auto;
+}
+
+h4 {
+  font-family: "Snell Roundhand", cursive;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  grid-area: mn;
+  justify-content: center;
+}
+
+/* Styling for each section of a journal entry */
+.entry-box {
+  border: 0.25em groove #20b2aa;
+  border-style: groove none;
+  height: 110px;
+  margin: 0;
+}
+
+/* Styling for the text in each journal entry */
+.entry-text {
+  margin: 0;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Styling for error messages */
+.error {
+  color: #f00;
+}
+
+/* Styling for each journal entry */
+.journal-section {
+  border: 0.25em groove #20b2aa;
+}
+
+/* Styling for each section's title */
+.section-title {
+  border: 0.25em groove #20b2aa;
+  border-style: none none groove none;
+  margin: 0;
+}
+
+/* Styling for the element holding the journal entries */
+#entryHolder {
+  background-color: #9370db;
+  border: 0.25em groove #20b2aa;
+  border-radius: 1em;
+  color: #ffd700;
+  display: grid;
+  grid-template-columns: 100px 125px 400px;
+  height: 500px;
+  margin: 1em;
+  overflow: auto;
+  text-align: center;
+  width: 625px;
+}
+
+/* Hide the scrollbar for the container of journal entries */
+#entryHolder::-webkit-scrollbar {
+  display: none;
+}
+
+/* Styling for the form's button */
+#generate {
+  background-color: #20b2aa;
+  border-radius: 1em;
+  color: #ffd700;
+  font: 1.25em "Snell Roundhand", cursive;
+  height: 2em;
+  margin: 0 auto;
+  width: 250px;
+}
