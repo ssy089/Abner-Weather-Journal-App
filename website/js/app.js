@@ -163,7 +163,7 @@ function generateData(clickEvent) {
      * and then call a function to retrieve all journal entries
      * and to update the UI.
      */
-    postJournalData('/projectData', journalEntry).then(function(data) {
+    postJournalData('https://abner-vinaja-weather-journal-app.azurewebsites.net/projectData', journalEntry).then(function(data) {
       loadJournalEntries();
     });
   });
@@ -179,7 +179,7 @@ function loadJournalEntries() {
   /* Using Promises, get all stored journal entries and update the
    * UI by adding HTML for each journal entry.
    */
-  getJournalData('/projectData').then(function(projectData) {
+  getJournalData('https://abner-vinaja-weather-journal-app.azurewebsites.net/projectData').then(function(projectData) {
     let dateHTML = '<div class="section-title"><h4>Date</h4></div>';               //Write the HTML for the date section.
     let temperatureHTML = '<div class="section-title"><h4>Temperature</h4></div>'; //Write the HTML for the temperature section.
     let feelingsHTML = '<div class="section-title"><h4>Feelings</h4></div>';       //Write the HTML for the feelings section.
